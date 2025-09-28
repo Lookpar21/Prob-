@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baccarat Deck Tracker — v6 Basic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Baccarat Deck Tracker <span class="muted">— v6 Basic</span></h1>
+  <p class="subtitle">กรอกไพ่ตามลำดับ ดูจำนวนไพ่ที่เหลือ และสุ่มไพ่ถัดไป (สุ่มเทียบเท่า 416!)</p>
+</header>
+
+<main>
+<section class="card">
+  <h2>1) กรอกไพ่ที่ออกแล้ว</h2>
+  <div class="ranks-grid" id="rankButtons"></div>
+  <div class="controls">
+    <button id="btnUndo">↩ Undo</button>
+    <button id="btnReset">ล้างทั้งหมด</button>
+    <span class="note" id="totalLeft"></span>
+  </div>
+  <div class="grid-circles" id="enteredCircles"></div>
+</section>
+
+<section class="card">
+  <h2>2) ไพ่ที่เหลือ</h2>
+  <div id="countsTable"></div>
+</section>
+
+<section class="card">
+  <h2>3) สุ่มไพ่ถัดไป</h2>
+  <div class="controls">
+    <select id="previewCount">
+      <option value="10">10 ใบ</option>
+      <option value="20">20 ใบ</option>
+      <option value="30" selected>30 ใบ</option>
+      <option value="50">50 ใบ</option>
+    </select>
+    <button id="btnShowN" class="primary">สุ่ม</button>
+  </div>
+  <div id="nextN"></div>
+</section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
